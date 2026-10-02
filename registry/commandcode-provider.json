@@ -4,7 +4,9 @@
   "categories": ["provider"],
   "caveats": [
     "Requires the commandcode CLI on PATH, logged in via commandcode login.",
-    "Images and steering are rejected; valid effort levels differ per model."
+    "Steering is rejected — the CLI has no live-turn channel.",
+    "Images work as of v0.1.4 but need a vision model: each is written to a temp file (max 16 MiB) that the model reads via `read_file`.",
+    "Effort levels vary per model; the Thinking selector is omit-by-default and models rejecting `--effort` are retried without it."
   ],
   "submittedBy": "alhassanaraouf"
 }
